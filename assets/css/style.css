@@ -1,0 +1,423 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+ul, li {
+    list-style: none;
+}
+
+.wrap {
+    margin: 0 auto;
+    min-height: 100vh;
+    width: 550px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: #ffffff;
+}
+
+.wrap.active {
+    width: 100%;
+    max-width: 100%;
+}
+
+.main-box {
+    position: relative;
+    max-width: 100%;
+    width: 500px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    background: #191919;
+    border-radius: 12px;
+}
+
+.main-box.active {
+    display: none;
+}
+
+.main-box>div {
+    margin: 16px auto;
+}
+
+.btnclass {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+}
+
+.gameOpen {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -38%);
+    color: #ffffff;
+    text-transform: uppercase;
+    -webkit-text-stroke: 0.3vw #f7f7fe;
+    font-size: 30px;
+}
+
+.gameOpen::before {
+    border-right: 2px solid #37b9f1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    color: #37b9f1;
+    content: attr(data-text);
+    -webkit-text-stroke: 0vw #f7f7fe;
+    animation: openTitle 6s linear infinite;
+}
+
+.btn {
+    margin: 0 20px;
+    width: 100%;
+    height: 56px;
+    font-size: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    border: 1px solid #e5e8eb;
+    color: #ffffff;
+    transition: 0.5s linear;
+    background: transparent;
+}
+
+.btn:hover {
+    background: #ffffff;
+    border: 1px solid black;
+    color: #000;
+    transition: 0.5s linear;
+}
+
+.resetBtn {
+    width: 400px;
+    background: #191919;
+    color: #ffffff;
+    display: none;
+}
+
+.play-time {
+    text-align: center;
+    padding: 8px;
+    width: 400px;
+    font-size: 26px;
+}
+
+.modal {
+    padding: 1rem;
+    max-width: 100%;
+    width: 400px;
+    height: 300px;
+    background: #191919;
+    display: none;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 31px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 12px;
+    box-shadow: 6px 7px 12px rgba(0, 0, 0, 0.52),
+    inset 1px 2px 12px rgba(0, 0, 0, 0.52);
+}
+
+.modal .title {
+    font-size: 22px;
+}
+
+.modal .modalsub {
+    font-size: 20px;
+}
+
+.modal .title, .modalsub {
+    color: #ffffff;
+}
+
+.modal.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal2 {
+    padding: 1rem;
+    max-width: 90%;
+    width: 400px;
+    height: 250px;
+    background: #ffffff;
+    display: none;
+    border-radius: 12px;
+    box-shadow: 11px 11px 2px rgba(0, 0, 0, 0.12),
+        inset -3px -3px 2px rgba(0, 0, 0, 0.12);
+}
+
+.err {
+    font-size: 26px;
+    color: red;
+    position: relative;
+}
+
+.modal2 .subtitle {
+    position: relative;
+}
+
+.modal .content {
+    display: flex;
+    flex-direction: column;
+}
+
+.content>div {
+    margin: 12px auto;
+}
+
+.content .subtitle {
+    font-size: 18px;
+}
+
+.game-text {
+    display: none;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container>div, ul {
+    margin: 16px auto;
+}
+
+.container.active {
+    display: flex;
+}
+
+.item-box {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+li {
+    background: url("https://placeimg.com/400/400/any");
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+
+.list0 {
+    background-position-x: 0px;
+    background-position-y: 0px;
+}
+
+.list1 {
+    background-position-x: -100px;
+    background-position-y: 0px;
+}
+
+.list2 {
+    background-position-x: -200px;
+    background-position-y: 0px;
+}
+
+.list3 {
+    background-position-x: -300px;
+    background-position-y: 0px;
+}
+
+.list4 {
+    background-position-x: 0px;
+    background-position-y: -100px;
+}
+
+.list5 {
+    background-position-x: -100px;
+    background-position-y: -100px;
+}
+
+.list6 {
+    background-position-x: -200px;
+    background-position-y: -100px;
+}
+
+.list7 {
+    background-position-x: -300px;
+    background-position-y: -100px;
+}
+
+.list8 {
+    background-position-x: 0px;
+    background-position-y: -200px;
+}
+
+.list9 {
+    background-position-x: -100px;
+    background-position-y: -200px;
+}
+
+.list10 {
+    background-position-x: -200px;
+    background-position-y: -200px;
+}
+
+.list11 {
+    background-position-x: -300px;
+    background-position-y: -200px;
+}
+
+.list12 {
+    background-position-x: 0px;
+    background-position-y: -300px;
+}
+
+.list13 {
+    background-position-x: -100px;
+    background-position-y: -300px;
+}
+
+.list14 {
+    background-position-x: -200px;
+    background-position-y: -300px;
+}
+
+.list15 {
+    background-position-x: -300px;
+    background-position-y: -300px;
+}
+
+@media (max-width: 474px) {
+    .wrap {
+        background: rgba(0, 0, 0, 0.25);
+    }
+
+    .modal {
+        display: none;
+    }
+
+    .container {
+        display: none;
+    }
+
+    .modal2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal2 .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .modal2 .content .subtitle {
+        font-size: 21px;
+    }
+
+    .modal2 .subtitle::after {
+        right: 44px;
+        top: -104px;
+        font-size: 24px;
+    }
+
+    .modal2 .subtitle::before {
+        top: -90px;
+        left: 52px;
+        font-size: 24px;
+    }
+
+    .err::after {
+        left: -12px;
+        top: -16px;
+    }
+
+    .err::before {
+        right: -12px;
+        bottom: -16px;
+    }
+
+    .err::after, .err::before, .subtitle::after, .subtitle::before {
+        content: "Error";
+        position: absolute;
+        animation: textOn 3s linear infinite;
+        opacity: 0;
+        color: red;
+    }
+
+    .main-box {
+        display: none;
+    }
+}
+
+@keyframes textOn {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.2;
+
+    }
+
+    40% {
+        opacity: 0.4;
+
+    }
+
+    60% {
+        opacity: 0.6;
+
+    }
+
+    80% {
+        opacity: 0.8;
+
+    }
+
+    100% {
+        opacity: 0.01;
+
+    }
+}
+
+@keyframes modalanimation {
+    0%{
+        transform: translate(0);
+    }
+    50% {
+        transform: translate(0, -20%);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes openTitle {
+
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+
+    50%,
+    90% {
+        width: 100%;
+    }
+}
